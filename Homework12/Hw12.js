@@ -11,7 +11,8 @@ convertNames(['Kolya','Sasha','Rudik']);
 // Задание 2
 function currTime (arr2) {
    return arr2.reduce(function (r, v) {
-        return 'Текущее время: ' + r + ' : ' + v;
+       r = 'Текущее время: ' + r;
+        return r + ' : ' + v;
     });
 }
 currTime(['00', '13', '24']);
@@ -35,9 +36,14 @@ isVowel('Преститижетатор');
 
 function countSentencesLetters (sentence){
     var sentenceArr = sentence.split(/[.?!]/g),
-        sentenceClone = sentence.replace(/[\s,]/g,'').split(/[.?!]/g),
+        sentenceClone = sentence.split(/[\s,]/g).join('').split(/[.?!]/g),
         lettersQuantityArr = [],
         newSentenceArr = [];
+    for(var k = 0; k < sentence.length; k++){
+        if (sentence[k] === ',' || sentence[k] === ',') {
+
+        }
+    }
     for (var i = 0; i < sentenceArr.length; i++ ){
         if (sentenceArr[i] !== ''){
             newSentenceArr.push(sentenceArr[i].trim());
