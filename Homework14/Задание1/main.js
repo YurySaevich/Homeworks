@@ -5,9 +5,9 @@ addRow.addEventListener('click', function(){
     for (var i=0; i<3; i++) {
         var newCell=document.createElement('td');
         newCell.classList.add('textCells');
-        newRow.appendChild(newCell);
+        newRow.prepend(newCell);
     }
-    tableBody.appendChild(newRow);
+    tableBody.prepend(newRow);
 },false);
 
 var tableBody=document.getElementById('tableBody');
