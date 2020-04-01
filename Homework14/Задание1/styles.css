@@ -1,0 +1,13 @@
+td{
+   padding: 30px 70px;
+   border: solid 1px black;
+}
+.addRow input{
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+    margin: auto;
+}
+table{
+    margin: auto;
+}
