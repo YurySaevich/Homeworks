@@ -10,21 +10,22 @@ addRow.addEventListener('click', function(){
     tableBody.prepend(newRow);
 },false);
 
-var tableBody=document.getElementById('tableBody');
+
+var tableBody = document.getElementById('tableBody');
 var cells = tableBody.getElementsByClassName('textCells');
 for (var i = 0; i < cells.length; i++){
-   cells[i].addEventListener('click', function func(){
-       var input = document.createElement('input');
-       input.value = this.innerHTML;
-       this.innerHTML = '';
-       this.appendChild(input);
+       cells[i].addEventListener('click', function func () {
+        var input = document.createElement('input');
+        input.value = this.innerHTML;
+        this.innerHTML = '';
+        this.appendChild(input);
+        input.focus();
 
-       var self = this;
-       input.addEventListener('blur', function () {
-          self.innerHTML = this.value;
-          self.addEventListener('click', func);
-       });
-       this.removeEventListener('click', func);
-   });
+        var self = this;
+        input.addEventListener('blur', function () {
+            self.innerHTML = this.value;
+            self.addEventListener('click', func);
+        });
+        this.removeEventListener('click', func);
+        });
 }
-
